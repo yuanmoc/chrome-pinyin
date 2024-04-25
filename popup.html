@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf8">
+  <title>显示拼音</title>
+</head>
+<body>
+  <ul>  
+    <li>
+      <label for="scribedDisplayId">划词显示</label>
+      <input  type="checkbox" id="scribedDisplayId">
+    </li>
+    <li>
+      <label for="directlyDisplayId">直接显示</label>
+      <input type="checkbox" id="directlyDisplayId">
+    </li>
+  </ul>
+  <script src="script/popup.js"></script>  
+</body>
+<style>
+  /* 列表样式 */  
+  ul {  
+    list-style-type: none; /* 移除默认的列表项标记 */  
+    padding: 0; /* 移除默认的填充 */  
+    margin: 0; /* 移除默认的边距 */  
+    width: 100px;
+  }  
+    
+  /* 列表项样式 */  
+  li {  
+    display: flex; /* 使用flex布局来对齐内容和复选框 */  
+    align-items: center; /* 垂直居中 */  
+    margin-bottom: 10px; /* 每个列表项之间的间距 */  
+  }  
+    
+  /* 标签样式 */  
+  label {  
+    margin-right: 10px; /* 标签和复选框之间的间距 */  
+    cursor: pointer; /* 鼠标悬停时改变光标样式，表示可以点击 */  
+  }  
+    
+  /* 复选框样式 */  
+  input[type="checkbox"] {  
+    /* 可以添加一些自定义样式来改变复选框的外观，但请注意，这可能需要使用伪元素或第三方库来完全自定义复选框的外观 */  
+    margin-top: 0; /* 确保复选框与标签垂直对齐 */  
+    vertical-align: middle; /* 确保复选框与其他元素垂直对齐 */  
+  }  
+    
+  /* 选中状态的复选框样式（可选） */  
+  input[type="checkbox"]:checked {  
+    /* 这里可以添加一些样式来改变选中状态的复选框的外观 */  
+    background-color: #4CAF50; /* 例如，改变背景色 */  
+  }  
+</style>
+</html>

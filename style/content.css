@@ -1,0 +1,21 @@
+.yuanmoc-chinese {
+   position: relative;
+   display: inline-block;
+   padding: 6px 0px 4px 4px;
+}
+
+.yuanmoc-pinyin {
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    transform: translate(-50%, -1.4em); 
+    text-align: center; /* 水平居中 */
+    white-space: nowrap; /* 防止拼音换行 */
+    font-size: x-small;
+    opacity: 0.5;
+}
+
+.yuanmoc-chinese:hover > .yuanmoc-pinyin{
+    opacity: 1;
+    color: red;
+}

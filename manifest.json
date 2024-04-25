@@ -1,0 +1,38 @@
+{
+    "manifest_version": 3,
+    "name": "显示 pinyin",
+    "version": "1.0",
+    "description": "选择网页文字后显示对应的拼音。",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "background": {
+      "service_worker": "script/background.js"
+    },
+    "content_scripts": [
+        {
+          "matches": ["*://*/*"],
+          "js": [
+            "script/pinyin.js",
+            "script/content.js"
+            ],
+          "css": ["style/content.css"],
+          "run_at": "document_end" 
+        }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/logo.png",
+        "48": "images/logo.png",
+        "128": "images/logo.png"
+      }
+    },
+    "icons": {
+      "16": "images/logo.png",
+      "48": "images/logo.png",
+      "128": "images/logo.png"
+    }
+  }
